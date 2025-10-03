@@ -36,6 +36,7 @@
                             <a href="https://www.linkedin.com/in/mariano-kuran-software-developer" target="_blank" class="mr-4 py-1 rounded-lg duration-300 hover:cursor-pointer hover:text-blue-800">LinkedIn</a>
                             <a href="#contact" class="mr-4 py-1 rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800">Contacto</a>
                             <a href="#selected-work" class="mr-4 py-1 rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800">Proyectos</a>
+                            <a href="#services" class="mr-4 py-1 rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800">Servicios</a>
                         </div>
                     </div> 
                 </div>
@@ -70,6 +71,37 @@
                 </div>
             </section>
             
+            <!-- services -->
+            <section id="services" class="pb-10">
+                <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Servicios</h2>
+                <div class="h-full flex flex-wrap gap-4 justify-center md:justify-start">
+                    <div class="w-full md:w-fit max-w-[450px] p-5 md:p-10 rounded-lg shadow hover:shadow-lg duration-200">
+                        <h3 class="text-2xl md:text-4xl text-gray-800">Sitio Web Profesional</h3>
+                        <p class="text-gray-500 my-4 md:text-xl max-h-[250px] min-h-[250px] overflow-hidden">
+                            Un sitio web ligero, moderno y seguro para mostrar tu marca o proyecto en internet. Perfecto si necesitás estar online rápido, con tu propio dominio y a un costo muy bajo. Incluye diseño adaptable a celulares, optimización básica para Google y un contacto directo con tus clientes.
+                        </p>
+                        <div class="md:mt-8">
+                            <button type="button" onclick="consultWebsite()" class="w-full px-5 py-2 md:py-4 rounded-lg bg-gray-800 hover:bg-gray-900 text-white md:text-xl" title="Consultar por whatsapp">
+                                Consultar
+                                <i class="fa-brands fa-whatsapp ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-fit max-w-[450px] p-5 md:p-10 rounded-lg shadow hover:shadow-lg duration-200">
+                        <h3 class="text-2xl md:text-4xl text-gray-800">Sistema Web Profesional</h3>
+                        <p class="text-gray-500 my-4 md:text-xl max-h-[250px] min-h-[250px] overflow-hidden">
+                            Un sistema robusto y a medida, preparado para crecer junto con tu negocio. Pensado para manejar usuarios, datos y procesos de forma segura. Incluye servidores optimizados, copias de seguridad automáticas y la posibilidad de expandir funciones a futuro.
+                        </p>
+                        <div class="md:mt-8">
+                            <button type="button" onclick="consultSistem()"class="w-full px-5 py-2 md:py-4 rounded-lg bg-gray-800 hover:bg-gray-900 text-white md:text-xl" title="Consultar por whatsapp">
+                                Consultar
+                                <i class="fa-brands fa-whatsapp ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- skills -->
             <section id="skills" class="pb-10">
                 <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Tecnologías</h2>
@@ -91,11 +123,11 @@
             <section id="about" class="pb-10">
                 <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Sobre mi</h2>
                 <div class="h-full flex md:items-center">
-                    <div class="text-gray-500 md:text-2xl">
+                    <p class="text-gray-500 md:text-2xl">
                         Soy un desarrollador web apasionado por crear interfaces modernas, funcionales y atractivas.
                         Me gusta transformar ideas en experiencias digitales con un enfoque en el detalle y la usabilidad.  
                         Siempre estoy aprendiendo nuevas tecnologías y buscando proyectos donde pueda crecer y aportar valor.
-                    </div>
+                    </p>
                 </div>
             </section>
 
@@ -113,5 +145,19 @@
                 <span class="text-gray-400">© 2025 Todos los derechos reservados.</span>
             </footer>
         </div>
+
+        <script>
+            var phone = "543856776615";
+            function consultWebsite() {
+                let message = encodeURIComponent("Hola, necesito una página web profesional.");
+                let url = `https://wa.me/${phone}?text=${message}`;
+                window.open(url, "_blank");
+            }
+            function consultSistem() {
+                let message = encodeURIComponent("Hola, necesito un sistema web profesional.");
+                let url = `https://wa.me/${phone}?text=${message}`;
+                window.open(url, "_blank");
+            }
+        </script>
     </body>
 </html>
