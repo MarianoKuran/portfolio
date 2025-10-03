@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MK | Desarrollador de software</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://kit.fontawesome.com/d821ae6b42.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            /* Definir las fuentes para títulos y párrafos */
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+    </head>
+
+    <body class="flex justify-center bg-gray-50 text-gray-800">
+        <div class="w-[80%]">
+            <!-- Hero -->
+            <section class="md:h-[100vh] py-10 md:py-15">
+                <div class="h-full flex md:items-center">
+                    <div class="flex flex-col items-start md:block">
+                        <i class="fa-solid fa-code text-[1.5rem] md:text-[3rem]"></i>
+                        <h1 class="mb-4 ms-[-5px] text-[2rem] md:text-[5.25rem]">Mariano Kuran</h1>
+                        <p class="md:w-[60%] md:text-[2rem] text-gray-500">Desarrollador Fullstack creando experiencias digitales elegantes con tecnologías web modernas.</p>
+                        <div class="flex flex-wrap mt-5 md:gap-10 md:text-2xl md:mt-14 text-gray-500 ">
+                            <a href="/assets/cv-es.pdf" class="mr-4 py-1 rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800" download>Descargar CV</a>
+                            <a href="https://github.com/MarianoKuran" class="mr-4 py-1 rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800">Github</a>
+                            <a href="https://www.linkedin.com/in/mariano-kuran-software-developer" class="mr-4 py-1 rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800">LinkedIn</a>
+                            <a href="#contact" class="mr-4 py-1 rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800">Contacto</a>
+                            <a href="#selected-work" class="mr-4 py-1 rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800">Proyectos</a>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+
+            <!-- selected work -->
+            <section id="selected-work" class="pb-10">
+                <h2 class="mb-2 md:pt-4 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Proyectos</h2>
+                <div class="h-full flex flex-col flex-wrap md:items-center">
+                    <div class="w-full my-2 card">
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl md:text-4xl text-gray-800">ERP de Gestión Empresarial</span>
+                            <i class="hidden fa-solid fa-arrow-up-right-from-square text-gray-400"></i>
+                        </div>
+                        <div class="text-gray-500 my-4 md:text-xl">
+                            <b>Diseñé, construí y mantuve</b> funcionalidades clave en sistemas web, asegurando escalabilidad y facilidad de mantenimiento con PHP, Laravel, MySQL y Javascript.<br>
+                            <b>Desarrollé APIs</b> para integrar módulos internos, mejorando la interoperabilidad de los sistemas y reduciendo los tiempos de respuesta de consultas.
+                            <br>
+                            <b>Administré y optimicé</b> bases de datos MySQL, aplicando índices y consultas eficientes que redujeron el tiempo de ejecución de reportes. 
+                            <br>
+                            <b>Ejecuté pruebas manuales end-to-end y gestioné reportes de bugs en Jira</b> reduciendo incidencias filtradas en producción.
+                            <br>
+                            <b>Refactoricé y optimicé código legado</b> disminuyendo la carga del servidor y mejorando la mantenibilidad a largo plazo.</div>
+                        <div class="h-full flex flex-wrap">
+                            <div class="w-fit mr-1 md:mr-2 mb-2 py-1 px-3 rounded-full text-[12px] md:text-sm text-gray-800 bg-gray-200 hover:cursor-default">Laravel</div>
+                            <div class="w-fit mr-1 md:mr-2 mb-2 py-1 px-3 rounded-full text-[12px] md:text-sm text-gray-800 bg-gray-200 hover:cursor-default">MySQL</div>
+                            <div class="w-fit mr-1 md:mr-2 mb-2 py-1 px-3 rounded-full text-[12px] md:text-sm text-gray-800 bg-gray-200 hover:cursor-default">Bootstrap</div>
+                            <div class="w-fit mr-1 md:mr-2 mb-2 py-1 px-3 rounded-full text-[12px] md:text-sm text-gray-800 bg-gray-200 hover:cursor-default">Livewire</div>
+                            <div class="w-fit mr-1 md:mr-2 mb-2 py-1 px-3 rounded-full text-[12px] md:text-sm text-gray-800 bg-gray-200 hover:cursor-default">JavaScript / JQuery</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- skills -->
+            <section id="skills" class="pb-10">
+                <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Tecnologías</h2>
+                <div class="h-full flex flex-wrap gap-4 md:items-center">
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">PHP</div>
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">Laravel</div>
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">SQL</div>
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">Vue</div>
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">Livewire</div>
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">Tailwind</div>
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">JavaScript</div>
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">HTML</div>
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">CSS</div>
+                    <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">Git</div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="pb-10">
+                <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Sobre mi</h2>
+                <div class="h-full flex md:items-center">
+                    <div class="text-gray-500 md:text-2xl">
+                        Soy un desarrollador web apasionado por crear interfaces modernas, funcionales y atractivas.
+                        Me gusta transformar ideas en experiencias digitales con un enfoque en el detalle y la usabilidad.  
+                        Siempre estoy aprendiendo nuevas tecnologías y buscando proyectos donde pueda crecer y aportar valor.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="pb-10">
+                <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Contáctame</h2>
+                <div class="h-full flex flex-col">
+                    <div class="text-gray-500 md:text-2xl">¿Tienes un proyecto en mente? Trabajemos juntos para crear algo excepcional.</div>
+                    <a href="mailto:marianokurandev@gmail.com" class="underline mt-2 md:text-xl">marianokurandev@gmail.com</a>
+                </div>
+            </section>
+
+            <footer class="flex flex-col text-center pb-6 mt-10">
+                <div> <span class="font-semibold text-gray-800">MK | Desarrollador de software</span> </div>
+                <span class="text-gray-400">© 2025 Todos los derechos reservados.</span>
+            </footer>
+        </div>
+    </body>
+</html>
