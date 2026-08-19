@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MK | Desarrollador de software</title>
+        <title>Mariano Kuran | Desarrollador de software</title>
         <!-- Tailwind CSS CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://kit.fontawesome.com/d821ae6b42.js" crossorigin="anonymous"></script>
@@ -28,20 +28,28 @@
                 <div class="h-full flex md:items-center">
                     <div class="flex flex-col items-start md:block">
                         <div class="flex items-center gap-2 md:gap-5">
-                            <i class="fa-solid fa-code text-[1.5rem] md:text-[3rem]"></i>
-                            <p class="text-[1rem] md:text-[1.8rem] text-gray-500">Soluciones de Software End-to-End</p>
+                            <i class="hidden sm:block fa-solid fa-code text-[1.2rem] md:text-[3rem]"></i>
+                            <p class="hidden sm:block text-[1rem] md:text-[1.8rem] text-gray-500">Soluciones de Software End-to-End</p>
                         </div>
-                        <h1 class="mb-4 ms-[-5px] text-[2rem] md:text-[5.25rem]">Mariano Kuran</h1>
+                        <div class="flex flex-col justify-center items-start mb-4 text-[2rem] md:text-[5.25rem]">
+                            <span class="sm:-ms-1 me-2">Mariano Kuran</span>
+                            <div class="flex items-center">
+                                <i class="sm:hidden fa-solid fa-code text-sm me-2"></i> 
+                                <p class="sm:hidden text-sm text-gray-500">Soluciones de Software End-to-End</p>
+                            </div>
+                        </div>
                         <p class="md:w-[60%] md:text-[2rem] text-gray-500">Ayudo a empresas a digitalizar y optimizar sus procesos con sistemas web y móviles a medida.</p>
                         <div class="flex flex-col md:flex-row items-center flex-wrap w-full mt-5 gap-2 md:gap-10 md:text-2xl md:mt-14 text-gray-500 ">
                             <a href="#contact" class="w-full md:w-auto mr-2 py-4 px-5 rounded-xl bg-blue-500 text-center text-gray-50 duration-300 hover:cursor-pointer hover:bg-blue-600">Contacto</a>
                             <a href="/projects.html" class="w-full md:w-auto mr-2 py-2 px-5 rounded-xl md:rounded-3xl bg-gray-800 text-center text-gray-50 duration-300 hover:cursor-pointer hover:bg-gray-900">Proyectos</a>
                             <a href="#services" class="w-full md:w-auto mr-2 py-2 px-5 rounded-xl md:rounded-3xl bg-gray-800 text-center text-gray-50 duration-300 hover:cursor-pointer hover:bg-gray-900">Servicios</a>
-                            <a href="assets/cv.pdf" class="w-full md:w-auto mr-4 py-1 text-center rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800" download>Descargar CV</a>
-                            <i class="fa-solid fa-circle text-[8px] text-gray-500 hidden md:block"></i>
-                            <a href="https://github.com/MarianoKuran" target="_blank" class="w-full md:w-auto mr-4 py-1 text-center rounded-lg duration-300 hover:cursor-pointer hover:text-gray-800">Github</a>
-                            <i class="fa-solid fa-circle text-[8px] text-gray-500 hidden md:block"></i>
-                            <a href="https://www.linkedin.com/in/mariano-kuran-software-developer" target="_blank" class="w-full md:w-auto mr-4 py-1 text-center rounded-lg duration-300 hover:cursor-pointer hover:text-blue-800">LinkedIn</a>
+                            <div class="flex mt-2">
+                                <a href="assets/cv.pdf" class="underline md:w-auto mr-2 text-sm duration-300 hover:cursor-pointer hover:text-gray-800" download>Descargar CV</a>
+                                <i class="fa-solid fa-circle text-[8px] text-gray-500 hidden md:block"></i>
+                                <a href="https://github.com/MarianoKuran" target="_blank" class="underline md:w-auto mr-2 text-sm duration-300 hover:cursor-pointer hover:text-gray-800">Github</a>
+                                <i class="fa-solid fa-circle text-[8px] text-gray-500 hidden md:block"></i>
+                                <a href="https://www.linkedin.com/in/mariano-kuran-software-developer" target="_blank" class="underline md:w-auto mr-2 text-sm duration-300 hover:cursor-pointer hover:text-blue-800">LinkedIn</a>
+                            </div>
                         </div>
                     </div> 
                 </div>
@@ -49,7 +57,7 @@
             
             <!-- services -->
             <section id="services" class="pb-10">
-                <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Servicios</h2>
+                <h2 class="mb-6 font-semibold text-lg md:text-2xl text-gray-800 uppercase border-b md:border-none">Servicios</h2>
                 <div class="h-full flex flex-wrap gap-4 justify-center md:justify-start">
                     <div class="w-full md:w-fit max-w-[450px] p-5 md:p-10 rounded-lg shadow hover:shadow-lg duration-200">
                         <h3 class="text-2xl md:text-4xl text-gray-800">Sitio Web Profesional</h3>
@@ -80,7 +88,7 @@
 
             <!-- skills -->
             <section id="skills" class="pb-10">
-                <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Tecnologías</h2>
+                <h2 class="mb-6 font-semibold text-lg md:text-2xl text-gray-800 uppercase border-b md:border-none">Tecnologías</h2>
                 <div class="h-full flex flex-wrap gap-4 md:items-center">
                     <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">PHP</div>
                     <div class="py-2 px-5 rounded-lg border border-gray-200 text-gray-600 duration-100 hover:cursor-default hover:shadow">Laravel</div>
@@ -97,7 +105,7 @@
 
             <!-- About -->
             <section id="about" class="pb-10">
-                <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Sobre mi</h2>
+                <h2 class="mb-6 font-semibold text-lg md:text-2xl text-gray-800 uppercase border-b md:border-none">Sobre mi</h2>
                 <div class="h-full flex md:items-center">
                     <p class="text-gray-500 md:text-2xl">
                         Soy un desarrollador web apasionado por crear interfaces modernas, funcionales y atractivas.
@@ -109,7 +117,7 @@
 
             <!-- Contact -->
             <section id="contact" class="pb-10">
-                <h2 class="mb-6 font-semibold text-sm md:text-2xl text-gray-800 uppercase border-b md:border-none">Contáctame</h2>
+                <h2 class="mb-6 font-semibold text-lg md:text-2xl text-gray-800 uppercase border-b md:border-none">Contáctame</h2>
                 <div class="h-full flex flex-col">
                     <div class="text-gray-500 md:text-2xl">¿Tienes un proyecto en mente? Trabajemos juntos para crear algo excepcional.</div>
                     <a href="mailto:marianokurandev@gmail.com" class="underline mt-2 md:text-xl">marianokurandev@gmail.com</a>
