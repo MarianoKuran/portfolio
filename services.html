@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mariano Kuran | Servicios</title>
+        <!-- Tailwind CSS CDN -->
+        <script type="module" src="/src/main.js"></script>
+        <script src="https://kit.fontawesome.com/d821ae6b42.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2216%22>💻</text></svg>">
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            /* Definir las fuentes para títulos y párrafos */
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+    </head>
+    <body class="flex justify-center bg-gray-50 text-gray-800">
+        <div class="w-full lg:w-[80%] px-4 lg:p-0">
+            <!-- nav -->
+            <div class="w-full h-17.5 flex justify-between items-center gap-2">
+                <a href="/index.html" rel="noopener noreferrer">
+                    <div class="flex items-center gap-2 text-gray-800">
+                        <i class="fa-solid fa-arrow-left"></i> 
+                        <b>Mariano Kuran | Servicios</b>
+                    </div>
+                </a>
+            </div>
+            <div class="h-[80vh] grid grid-cols-10 grid-rows-12" x-data="servicesForm">
+                <div class="col-span-3 row-span-12 me-4">
+                    <p class="text-sm mb-4">
+                        <i class="fa-solid fa-circle-info text-blue-500"></i>
+                        Completa los pasos para realizar una consulta más efectiva
+                    </p>
+                    <div class="form_section_nav_item relative w-fit flex flex-col mb-2 cursor-pointer">
+                        <div @click="setActiveSection(sections[0])" class="flex items-center gap-2 my-0.5">
+                            <i :class="sections[0].icon"></i>
+                            <span x-text="sections[0].description" :class="{'text-gray-300': !sections[0].visible, 'text-gray-800': sections[0].visible}"></span>
+                        </div>
+                        <div class="absolute -bottom-3 left-2.75 h-4 border-l-[3px]" :class="getIconBarColor(sections[0])"> </div>
+                    </div>
+                    <div class="form_section_nav_item relative w-fit flex flex-col mb-2 cursor-pointer">
+                        <div @click="setActiveSection(sections[1])" class="flex items-center gap-2 my-0.5">
+                            <i :class="sections[1].icon"></i>
+                            <span x-text="sections[1].description" :class="{'text-gray-300': !sections[1].visible, 'text-gray-800': sections[1].visible}"></span>
+                        </div>
+                        <div class="absolute -bottom-3 left-2.75 h-4 border-l-[3px]" :class="getIconBarColor(sections[1])"> </div>
+                    </div>
+                    <div class="form_section_nav_item relative w-fit flex flex-col mb-2 cursor-pointer">
+                        <div @click="setActiveSection(sections[2])" class="flex items-center gap-2 my-0.5">
+                            <i :class="sections[2].icon"></i>
+                            <span x-text="sections[2].description" :class="{'text-gray-300': !sections[2].visible, 'text-gray-800': sections[2].visible}"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-7 ">
+                    <h3 class="font-semibold text-2xl"><span x-text="activeSection.title"></span></h3>
+
+                    <div class="py-4 border-b border-gray-200">
+                        <div x-show="sections[0].visible" class="flex flex-col gap-4">
+                            <div class="flex flex-col items-start gap-2">
+                                <div class="flex items-center p-2 duration-200">
+                                    <input type="radio" value="Atracción y calificación de clientes" x-model="responses.response_1.value" id="option_1" class="me-2 cursor-pointer">
+                                    <label for="option_1" class="cursor-pointer">Atracción y calificación de clientes</label>
+                                </div>
+                                <div class="flex items-center p-2 duration-200">
+                                    <input type="radio" value="Pagina web profesional" x-model="responses.response_1.value" id="option_2" class="me-2 cursor-pointer">
+                                    <label for="option_2" class="cursor-pointer">Pagina web profesional</label>
+                                </div>
+                                <div class="flex items-center p-2 duration-200">
+                                    <input type="radio" value="Sistema Web a Medida" x-model="responses.response_1.value" id="option_3" class="me-2 cursor-pointer">
+                                    <label for="option_3" class="cursor-pointer">Sistema Web a Medida</label>
+                                </div>
+                                <div class="flex items-center p-2 duration-200">
+                                    <input type="radio" value="Consulta General" x-model="responses.response_1.value" id="option_5" class="me-2 cursor-pointer">
+                                    <label for="option_5" class="cursor-pointer">Consulta General / Otro</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div x-show="sections[1].visible" class="flex flex-col gap-4">
+                            <div class="flex items-center p-2 duration-200">
+                                <input type="radio" value="Comercio / E-commerce / Retail" x-model="responses.response_2.value" id="option_6" class="me-2 cursor-pointer">
+                                <label for="option_6" class="cursor-pointer">Comercio / E-commerce / Retail</label>
+                            </div>
+                            <div class="flex items-center p-2 duration-200">
+                                <input type="radio" value="Servicios Profesionales" x-model="responses.response_2.value" id="option_7" class="me-2 cursor-pointer">
+                                <label for="option_7" class="cursor-pointer">Servicios Profesionales (Salud, legal, contable, educación)</label>
+                            </div>
+                            <div class="flex items-center p-2 duration-200">
+                                <input type="radio" value="Logística / Operaciones / Gastronomía" x-model="responses.response_2.value" id="option_8" class="me-2 cursor-pointer">
+                                <label for="option_8" class="cursor-pointer">Logística / Operaciones / Gastronomía</label>
+                            </div>
+                            <div class="flex items-center p-2 duration-200">
+                                <input type="radio" value="Emprendimiento personal / Startup" x-model="responses.response_2.value" id="option_9" class="me-2 cursor-pointer">
+                                <label for="option_9" class="cursor-pointer">Emprendimiento personal / Startup</label>
+                            </div>
+                            <div class="flex items-center p-2 duration-200">
+                                <input type="radio" value="Otro" x-model="responses.response_2.value" id="option_10" class="me-2 cursor-pointer">
+                                <label for="option_10" class="cursor-pointer">Otro</label>
+                            </div>
+                        </div>
+                        <div x-show="sections[2].visible" class="flex flex-col gap-4">
+                            <div class="flex items-center p-2 duration-200">
+                                <input type="radio" value="digitalizar un negocio o proceso que hoy hago manual" x-model="responses.response_3.value" id="option_11" class="me-2 cursor-pointer">
+                                <label for="option_11" class="cursor-pointer">Digitalizar un negocio o proceso que hoy hago manual</label>
+                            </div>
+                            <div class="flex items-center p-2 duration-200">
+                                <input type="radio" value="conseguir más clientes y mejorar la presencia online actual" x-model="responses.response_3.value" id="option_12" class="me-2 cursor-pointer">
+                                <label for="option_12" class="cursor-pointer">Conseguir más clientes / Mejorar la presencia actual</label>
+                            </div>
+                            <div class="flex items-center p-2 duration-200">
+                                <input type="radio" value="llevar a código una idea" x-model="responses.response_3.value" id="option_13" class="me-2 cursor-pointer">
+                                <label for="option_13" class="cursor-pointer">Tengo una idea y quiero llevarla a código</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center mt-4">
+                        <button x-show="!activeSendMessageButton()" @click="confirmResponse()" type="button" class="w-[25%] py-2 rounded text-gray-50 bg-blue-400 font-semibold cursor-pointer hover:bg-blue-500 duration-200">Siguiente</button>
+
+                        <button x-show="activeSendMessageButton()" @click="sendMessage()" type="button" class="w-[25%] py-2 rounded text-gray-50 bg-blue-400 font-semibold cursor-pointer hover:bg-blue-500 duration-200">Enviar consulta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
