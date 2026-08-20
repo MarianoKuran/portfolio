@@ -32,33 +32,58 @@
                 </a>
             </div>
             <div class="h-[80vh] grid grid-cols-10 grid-rows-12" x-data="servicesForm">
-                <div class="col-span-3 row-span-12 me-4">
+                <div class="hidden md:block col-span-3 row-span-12 me-4">
                     <p class="text-sm mb-4">
                         <i class="fa-solid fa-circle-info text-blue-500"></i>
                         Completa los pasos para realizar una consulta más efectiva
                     </p>
-                    <div class="form_section_nav_item relative w-fit flex flex-col mb-2 cursor-pointer">
+                    <div class=" relative w-fit flex flex-col mb-2 cursor-pointer">
                         <div @click="setActiveSection(sections[0])" class="flex items-center gap-2 my-0.5">
                             <i :class="sections[0].icon"></i>
                             <span x-text="sections[0].description" :class="{'text-gray-300': !sections[0].visible, 'text-gray-800': sections[0].visible}"></span>
                         </div>
                         <div class="absolute -bottom-3 left-2.75 h-4 border-l-[3px]" :class="getIconBarColor(sections[0])"> </div>
                     </div>
-                    <div class="form_section_nav_item relative w-fit flex flex-col mb-2 cursor-pointer">
+                    <div class=" relative w-fit flex flex-col mb-2 cursor-pointer">
                         <div @click="setActiveSection(sections[1])" class="flex items-center gap-2 my-0.5">
                             <i :class="sections[1].icon"></i>
                             <span x-text="sections[1].description" :class="{'text-gray-300': !sections[1].visible, 'text-gray-800': sections[1].visible}"></span>
                         </div>
                         <div class="absolute -bottom-3 left-2.75 h-4 border-l-[3px]" :class="getIconBarColor(sections[1])"> </div>
                     </div>
-                    <div class="form_section_nav_item relative w-fit flex flex-col mb-2 cursor-pointer">
+                    <div class=" relative w-fit flex flex-col mb-2 cursor-pointer">
                         <div @click="setActiveSection(sections[2])" class="flex items-center gap-2 my-0.5">
                             <i :class="sections[2].icon"></i>
                             <span x-text="sections[2].description" :class="{'text-gray-300': !sections[2].visible, 'text-gray-800': sections[2].visible}"></span>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-7 ">
+                
+                <!-- mobile nav -->
+                <div class="flex md:hidden col-span-10 row-span-1">
+                    <div class="relative w-fit flex flex-col mb-2 me-2 bg-gray-50 cursor-pointer">
+                        <div @click="setActiveSection(sections[0])" class="flex items-center gap-2 my-0.5">
+                            <i :class="sections[0].icon"></i>
+                        </div>
+                        <div class="absolute top-3 left-6 w-full border-t-[3px]" :class="getIconBarColor(sections[0])"></div>
+                        <span x-show="sections[0].visible" x-text="sections[0].description" :class="{'text-gray-300': !sections[0].visible, 'text-gray-800': sections[0].visible}"></span>
+                    </div>
+                    <div class="relative w-fit flex flex-col mb-2 me-2 bg-gray-50 cursor-pointer">
+                        <div @click="setActiveSection(sections[1])" class="flex items-center gap-2 my-0.5">
+                            <i :class="sections[1].icon"></i>
+                        </div>
+                        <div class="absolute top-3 left-6 w-full border-t-[3px]" :class="getIconBarColor(sections[1])"></div>
+                        <span x-show="sections[1].visible" x-text="sections[1].description" :class="{'text-gray-300': !sections[1].visible, 'text-gray-800': sections[1].visible}"></span>
+                    </div>
+                    <div class="relative w-fit flex flex-col mb-2 me-2 bg-gray-50 cursor-pointer">
+                        <div @click="setActiveSection(sections[2])" class="flex items-center gap-2 my-0.5">
+                            <i :class="sections[2].icon"></i>
+                        </div>
+                        <div class="absolute top-3 left-6 border-t-[3px]"></div>
+                        <span x-show="sections[2].visible" x-text="sections[2].description" :class="{'text-gray-300': !sections[2].visible, 'text-gray-800': sections[2].visible}"></span>
+                    </div>
+                </div>
+                <div class="col-span-10 md:col-span-7 mt-4 md:mt-0">
                     <h3 class="font-semibold text-2xl"><span x-text="activeSection.title"></span></h3>
 
                     <div class="py-4 border-b border-gray-200">
@@ -121,9 +146,9 @@
                     </div>
 
                     <div class="flex justify-center mt-4">
-                        <button x-show="!activeSendMessageButton()" @click="confirmResponse()" type="button" class="w-[25%] py-2 rounded text-gray-50 bg-blue-400 font-semibold cursor-pointer hover:bg-blue-500 duration-200">Siguiente</button>
+                        <button x-show="!activeSendMessageButton()" @click="confirmResponse()" type="button" class="w-100 md:w-[25%] py-2 rounded text-gray-50 bg-blue-400 font-semibold cursor-pointer hover:bg-blue-500 duration-200">Siguiente</button>
 
-                        <button x-show="activeSendMessageButton()" @click="sendMessage()" type="button" class="w-[25%] py-2 rounded text-gray-50 bg-blue-400 font-semibold cursor-pointer hover:bg-blue-500 duration-200">Enviar consulta</button>
+                        <button x-show="activeSendMessageButton()" @click="sendMessage()" type="button" class="w-100 md:w-[25%] py-2 rounded text-gray-50 bg-blue-400 font-semibold cursor-pointer hover:bg-blue-500 duration-200">Enviar consulta</button>
                     </div>
                 </div>
             </div>
