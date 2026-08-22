@@ -88,21 +88,21 @@ export default () => ({
         const active = Object.values(this.responses).every(response => response.value !== null);
         
         if (active) {
-            let message = `¡Hola! Estoy interesado en una solución de ${this.responses.response_1.value}.`;
+            let message = '¡Hola!';
 
-            if (this.responses.response_1.value == 'Consulta General') {
-                message = `¡Hola! Quiero hacer una consulta general.`;
-            }
-
-            if (this.responses.response_2.value == 'Otro') {
-                message += ``;
+            if (this.responses.response_1.value === 'Consulta General') {
+                message += ' Quiero hacer una *consulta general*.\n\n';
             } else {
-                message += `para el rubro de ${this.responses.response_2.value}.`;
+                message += ` Estoy interesado en: *${this.responses.response_1.value}*.\n\n`;
             }
 
-            message += ` Mi objetivo principal es ${this.responses.response_3.value}.`;
+            if (this.responses.response_2.value !== 'Otro') {
+                message += `*Rubro:* ${this.responses.response_2.value}\n`;
+            }
 
-            this.finalMessage = message;
+            message += `*Necesidad:* ${this.responses.response_3.value}`;
+
+            this.finalMessage = message;;
         }
 
         return active;
